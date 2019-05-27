@@ -1,7 +1,7 @@
 {
   "name": "use-i18n",
-  "version": "1.0.0",
-  "main": "src/index.js",
+  "version": "1.0.1",
+  "main": "dist/index.js",
   "license": "MIT",
   "author": "Victor Kang <kwc961082967@gmail.com>",
   "repository": "github:victorkangsh/use-i18n",
@@ -19,7 +19,7 @@
   "scripts": {
     "ci": "eslint . --cache --ext js,jsx --ignore-pattern node_modules --ignore-pattern pkg",
     "build": "pika-pack build",
-    "pika-publish": "pika-pack publish"
+    "pika": "pika-pack publish --no-yarn"
   },
   "dependencies": {},
   "devDependencies": {

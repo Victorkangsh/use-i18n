@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 const isClient = typeof window === 'object';
 
-const useLocalStorage = (key, initialValue, raw) => {
+export const useLocalStorage = (key, initialValue, raw) => {
   if (!isClient) {
     return [initialValue, () => {}];
   }
@@ -38,5 +38,3 @@ const useLocalStorage = (key, initialValue, raw) => {
 
   return [state, setState];
 };
-
-export default useLocalStorage;
