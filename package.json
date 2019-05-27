@@ -1,0 +1,78 @@
+{
+  "name": "use-i18n",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "author": "Victor Kang <kwc961082967@gmail.com>",
+  "repository": "github:victorkangsh/use-i18n",
+  "keywords": [
+    "react",
+    "hook",
+    "i18n",
+    "use",
+    "use-i18n",
+    "locales",
+    "internationalisation",
+    "localisation",
+    "nantes"
+  ],
+  "scripts": {
+    "ci": "eslint . --cache --ext js,jsx --ignore-pattern node_modules --ignore-pattern pkg",
+    "build": "pika-pack build",
+    "pika-publish": "pika-pack publish"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@pika/pack": "^0.3.7",
+    "@pika/plugin-build-node": "^0.3.16",
+    "@pika/plugin-build-types": "^0.3.16",
+    "@pika/plugin-build-web": "^0.4.0",
+    "@pika/plugin-standard-pkg": "^0.4.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.3"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "rules": {
+      "semi": [
+        "error",
+        "never"
+      ],
+      "max-len": [
+        "error",
+        200
+      ],
+      "import/prefer-default-export": "off",
+      "import/no-unresolved": "off"
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ],
+      [
+        "@pika/plugin-standard-pkg"
+      ]
+    ]
+  }
+}
